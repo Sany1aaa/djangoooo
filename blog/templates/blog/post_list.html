@@ -4,9 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Posts</title>
-
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin: 0 0 10px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        small {
+            display: block;
+            margin-top: 10px;
+            color: #777;
+        }
+        .create-post {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .create-post:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
+
     <h1>Blog Posts</h1>
 
     <ul>
@@ -21,6 +70,7 @@
         {% endfor %}
     </ul>
 
-    <a href="{% url 'create_post' %}">Create New Post</a>
+    <a href="{% url 'create_post' %}" class="create-post">Create New Post</a>
+
 </body>
 </html>

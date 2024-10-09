@@ -4,10 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .error-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            color: #e74c3c;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+        a:hover {
+            background-color: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <h1>Error </h1>
-    <p>{{ message }}</p>
-    <a href = "{% url 'post_list' %}">Go back to post list</a>
+
+    <div class="error-container">
+        <h1>Error</h1>
+        <p>{{ message }}</p>
+        <a href="{% url 'post_list' %}">Go back to post list</a>
+    </div>
+
 </body>
 </html>

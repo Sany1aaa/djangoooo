@@ -3,10 +3,10 @@ from .views import post_list, post_detail, create_post, update_post, delete_post
 
 urlpatterns=[
     path('post_list/', post_list, name="post_list"), 
-    path('post_detail/<int:id>', post_detail, name='post_detail'), 
-    path('create_post/', create_post, name='create_post'), 
-    path('update_post/<int:id>', update_post, name='update_post'), 
-    path('delete_post/<int:id>', delete_post, name='delete_post'), 
+    path('post_details/<int:id>', post_detail, name='post_detail'), 
+    path('post_create/', create_post, name='post_create'), 
+    path('post_update/<int:id>', update_post, name='post_update'), 
+    path('post_delete/<int:id>', delete_post, name='post_delete'), 
     path('post_detail/comment_list/<int:post_id>', comment_list, name="comment_list"), 
     path('post_detail/add_comment/<int:post_id>', add_comment, name="add_comment")
 ]
